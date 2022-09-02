@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Taras</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="javascript/index.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="list roundBorder">
+            <div class="header-box">
+                <label class="switch">
+                    <input type="checkbox" id="slider" checked>
+                    <span class="slider"></span>
+                </label>
+                <h1>Lista de Tareas</h1>
+            </div>
+            <div class="date">
+                <div class="dateLeft">
+                    <div id="dateNumber"></div>
+                    <div>
+                        <div id="dateMonth"></div>
+                        <div id="dateYear"></div>
+
+                    </div>
+                </div>
+
+                <div id="dateText"></div>
+            </div>
+            <form onsubmit="addNewTask(event)">
+                <input type="text" name="taskText" autocomplete="off" placeholder="nueva tarea" class="roundBorder">
+                <button type="submit" class="addTaskButton">+</button>
+                <button type="button" class="orderButton roundBorder" onclick="renderOrderedTask()">Ordenar</button>
+
+            </form>
+            <div id="taskContainer"></div>
+        </div>
+    </main>
+</body>
+
+</html>
